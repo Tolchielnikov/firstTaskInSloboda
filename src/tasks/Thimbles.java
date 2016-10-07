@@ -1,7 +1,9 @@
+package tasks;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
-
+//todo create JavaDoc
 /**
  * Created by zOpa
  */
@@ -11,25 +13,28 @@ public class Thimbles {
         th.run();
     }
 
-    private void run() throws IOException {
+    public int run() throws IOException {
 
         int arr[] = {1,0,0}; //todo
+        int numberThimble = 0;
 
         Scanner sc = new Scanner(new File("inputThimbles.txt"));
 
-        char[] chars = sc.next().toCharArray();
+        char[] chars = sc.next().toUpperCase().toCharArray();
 
         for (int i = 0;  i  < chars.length; i++){
           menyaem(arr,chars[i]);
         }
 
-        for (int i = 0;  i  < arr.length; i++){
-            System.out.println(arr[i]);
+        for (int i = 0; i < arr.length; i++){
+            if (arr[i] == 1){
+               numberThimble = i;
+            }
         }
-
+        return numberThimble + 1;
     }
 
-    private int [] menyaem(int arr [], char ch ){
+    private int [] menyaem(int arr [], char ch ){  //todo method name
 
         if (ch == 'A'){
             changeElement(arr,0,1);

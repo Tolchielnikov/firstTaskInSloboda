@@ -1,3 +1,5 @@
+package tasks;
+
 /**
  * Created by zOpa on 21.09.2016.
  */

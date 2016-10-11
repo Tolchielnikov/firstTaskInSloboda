@@ -8,10 +8,6 @@ import java.util.Scanner;
  * Created by zOpa
  */
 public class Thimbles {
-    public static void main(String[] args) throws IOException {
-        Thimbles th  = new Thimbles();
-        th.run();
-    }
 
     public int run() throws IOException {
 
@@ -19,6 +15,8 @@ public class Thimbles {
         int numberThimble = 0;
 
         Scanner sc = new Scanner(new File("inputThimbles.txt"));
+
+        if (sc.hasNext()){
 
         char[] chars = sc.next().toUpperCase().toCharArray();
 
@@ -30,6 +28,7 @@ public class Thimbles {
             if (arr[i] == 1){
                numberThimble = i;
             }
+          }
         }
         return numberThimble + 1;
     }
@@ -38,12 +37,12 @@ public class Thimbles {
 
         if (ch == 'A'){
             changeElement(arr,0,1);
-        }
-        if (ch == 'B'){
+        }else if (ch == 'B'){
             changeElement(arr,1,2);
-        }
-        if (ch == 'C'){
+        } else if (ch == 'C'){
             changeElement(arr,0,2);
+        } else {
+            throw new IllegalArgumentException("Only A B C"); //todo mess.
         }
 
         return arr;

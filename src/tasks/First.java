@@ -11,26 +11,10 @@ public class First {
             throw new IllegalArgumentException("null" ); //todo mess.
         }
 
-        int max = arr[0];
-        int min = arr[0];
-        int maxIndex = 0;
-        int minIndex = 0;
+        IndexElement inEl = new IndexElement();
 
-        for (int i = 0; i < arr.length; i++) {
-
-            if (max < arr[i]) {
-                max = arr[i];
-                maxIndex = i;
-            }
-
-            if (min > arr[i]) {
-                min = arr[i];
-                minIndex = i;
-            }
-        }
-
-        for (int i = Math.max(maxIndex, minIndex); i > Math.min(maxIndex, minIndex); i--) {
-            for (int j = Math.min(maxIndex, minIndex); j < i; j++) {
+        for (int i = Math.max(inEl.maxElementIndex(arr), inEl.minElementIndex(arr)); i > Math.min(inEl.maxElementIndex(arr), inEl.minElementIndex(arr)); i--) {
+            for (int j = Math.min(inEl.maxElementIndex(arr), inEl.minElementIndex(arr)); j < i; j++) {
                 if (arr[j] > arr[j + 1]) {
                     int tmp = arr[j + 1];
                     arr[j + 1] = arr[j];

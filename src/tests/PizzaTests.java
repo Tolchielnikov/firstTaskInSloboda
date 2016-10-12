@@ -47,7 +47,7 @@ public class PizzaTests {
         testToException(random.nextInt(Integer.MAX_VALUE - 46341) + 46341);
     }
 
-    private static void testToException(int n) {
+    static private void testToException(int n) {
         try {
             pizza.pieces(n);
             fail();

@@ -1,7 +1,7 @@
-package tests;
+package tests.forTests;
 
 import org.junit.Test;
-import tasks.IndexElement;
+import tasks.forTests.IndexElement;
 
 import static junit.framework.TestCase.assertEquals;
 

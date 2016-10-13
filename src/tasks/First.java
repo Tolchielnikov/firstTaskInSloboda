@@ -1,5 +1,8 @@
 package tasks;
 //todo JavaDoc
+
+import tasks.forTests.IndexElement;
+
 /**
  * Created by zOpa
  */

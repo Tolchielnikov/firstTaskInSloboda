@@ -1,4 +1,4 @@
-package tasks;
+package tasks.forTests;
 //todo JavaDoc
 /**
  * Created by zOpa

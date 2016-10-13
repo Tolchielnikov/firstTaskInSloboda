@@ -1,8 +1,8 @@
-package tests;
+package tests.tasks;
 
 import org.junit.Test;
 import tasks.First;
-import tasks.IndexElement;
+import tasks.forTests.IndexElement;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package tests;
+package tests.tasks;
 
 import org.junit.Test;
 import tasks.Pizza;

@@ -10,7 +10,7 @@ public class First {
 
     public int[] sortingArr(int arr[]) {
 
-        if (arr==null){
+        if (arr == null){
             throw new IllegalArgumentException("null" ); //todo mess.
         }
 

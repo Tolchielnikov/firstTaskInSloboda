@@ -11,7 +11,8 @@ public class Thimbles {
 
     public int run() throws IOException {
 
-        int arr[] = {1,0,0}; //todo
+        int thimbles[] = {1,0,0};
+
         int numberThimble = 0;
 
         Scanner sc = new Scanner(new File("inputThimbles.txt"));
@@ -21,11 +22,11 @@ public class Thimbles {
         char[] chars = sc.next().toUpperCase().toCharArray();
 
         for (int i = 0;  i  < chars.length; i++){
-          menyaem(arr,chars[i]);
+          swap(thimbles,chars[i]);
         }
 
-        for (int i = 0; i < arr.length; i++){
-            if (arr[i] == 1){
+        for (int i = 0; i < thimbles.length; i++){
+            if (thimbles[i] == 1){
                numberThimble = i;
             }
           }
@@ -33,7 +34,7 @@ public class Thimbles {
         return numberThimble + 1;
     }
 
-    private int [] menyaem(int arr [], char ch ){  //todo method name
+    private int [] swap(int arr [], char ch ){
 
         if (ch == 'A'){
             changeElement(arr,0,1);
